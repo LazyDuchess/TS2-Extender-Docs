@@ -270,3 +270,33 @@ Writes contents into a file.
 
 `contents`
 : (string) Contents to write into the file.
+
+---
+
+### `PackString(str)`
+Packs a string into an array of shorts, for storage in TS2.
+
+#### Parameters
+
+`str`
+: (string) String to pack.
+
+#### Returns
+
+`str`
+: (table) Table array with the string encoded as short numbers.
+
+---
+
+### `UnpackString(data)`
+Unpacks an array of short numbers into a string.
+
+#### Parameters
+
+`data`
+: (table) Array of short numbers to unpack.
+
+#### Returns
+
+`str`
+: (string) Result string from unpacked array.

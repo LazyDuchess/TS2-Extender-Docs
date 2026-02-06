@@ -8,5 +8,7 @@ nav:
     - Delegates: extenderapi/Delegates.md
     - Classes: 
       - InteractionList: extenderapi/Classes/InteractionList.md
+      - DataReader: extenderapi/Classes/DataReader.md
+      - DataWriter: extenderapi/Classes/DataWriter.md
       
 theme: readthedocs
