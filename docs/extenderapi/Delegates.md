@@ -2,7 +2,7 @@
 
 Delegates are basically game events you can listen to to run your own custom code. For example, you can listen for the game building the pie menu to inject custom interactions.
 
-You can use delegates via the [AddGameCallback](Globals.md#addgamecallback) method.
+You can use delegates via the [AddGameCallback](Globals.md#addgamecallbackdelegate-callback-priority) method.
 
 ---
 

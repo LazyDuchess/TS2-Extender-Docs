@@ -175,7 +175,7 @@ Adds a callback that will run a custom Lua function when an event fires.
 #### Parameters
 
 `delegate`
-: (number) Delegate or event to listen to.
+: ([Delegates](Delegates.md)) Delegate or event to listen to.
 
 `callback`
 : (function) Lua function to run when the delegate is fired.
