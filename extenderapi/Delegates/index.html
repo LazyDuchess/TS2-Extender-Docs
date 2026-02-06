@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Delegates - TS2 Extender Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Delegates";
+        var mkdocs_page_input_path = "extenderapi/Delegates.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> TS2 Extender Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TS2 Extender Lua API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Globals/">Globals</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Delegates</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#delegatesonbuildpiemenuinteractions-sim-object-clicked-debug">Delegates.OnBuildPieMenu(interactions, sim, object, clicked, debug)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Classes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/InteractionList/">InteractionList</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataReader/">DataReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataWriter/">DataWriter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TS2 Extender Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TS2 Extender Lua API</li>
+      <li class="breadcrumb-item active">Delegates</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="delegates">Delegates</h1>
+<p>Delegates are basically game events you can listen to to run your own custom code. For example, you can listen for the game building the pie menu to inject custom interactions.</p>
+<p>You can use delegates via the <a href="../Globals/#addgamecallbackdelegate-callback-priority">AddGameCallback</a> method.</p>
+<hr />
+<h3 id="delegatesonbuildpiemenuinteractions-sim-object-clicked-debug"><code>Delegates.OnBuildPieMenu(interactions, sim, object, clicked, debug)</code></h3>
+<p>Fired when the game builds a user-directed interaction menu. Happens when hovering and clicking over objects.</p>
+<h4 id="parameters">Parameters</h4>
+<p><code>interactions</code>
+: (<a href="../Classes/InteractionList/">InteractionList</a>) List of interactions.</p>
+<p><code>sim</code>
+: (number) Object ID of the sim building the pie menu.</p>
+<p><code>object</code>
+: (number) Object ID of the target object.</p>
+<p><code>clicked</code>
+: (boolean) Whether the pie menu is being built because the player has clicked on the object. If False, then we're just hovering the mouse on it.</p>
+<p><code>debug</code>
+: (boolean) Whether the player is shift clicking with testingcheatsenabled.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Globals/" class="btn btn-neutral float-left" title="Globals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Classes/InteractionList/" class="btn btn-neutral float-right" title="InteractionList">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Globals/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Classes/InteractionList/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

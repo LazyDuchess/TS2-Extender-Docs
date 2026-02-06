@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Globals - TS2 Extender Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Globals";
+        var mkdocs_page_input_path = "extenderapi/Globals.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> TS2 Extender Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TS2 Extender Lua API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Globals</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fields">Fields</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ts2extender">TS2Extender</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#getexecutabledirectory">GetExecutableDirectory()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getuserdirectory">GetUserDirectory()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_1">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#registercheatname-description-callback">RegisterCheat(name, description, callback)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getts2extenderversion">GetTS2ExtenderVersion()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_2">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getuserinput">GetUserInput()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_3">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overridestringoriginalindex-originalid-originalgroup-newindex-newid-newgroup">OverrideString(originalIndex, originalId, originalGroup, newIndex, newId, newGroup)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clearstringoverrideoriginalindex-originalid-originalgroup">ClearStringOverride(originalIndex, originalId, originalGroup)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overrideuioriginalid-newid">OverrideUI(originalId, newId)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clearuioverrideoriginalid">ClearUIOverride(originalId)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_4">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overridemakemoneystringcallback">OverrideMakeMoneyString(callback)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_5">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clearmakemoneystringoverride">ClearMakeMoneyStringOverride()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addgamecallbackdelegate-callback-priority">AddGameCallback(delegate, callback, priority)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_6">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_4">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#removegamecallbackdelegate-callbackid">RemoveGameCallback(delegate, callbackId)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_7">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ensuredirectorypath">EnsureDirectory(path)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_8">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getfilesindirectorypath-extension">GetFilesInDirectory(path, extension)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_9">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_5">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#readfilepath">ReadFile(path)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_10">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_6">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#writefilepath-contents">WriteFile(path, contents)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_11">Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#packstringstr">PackString(str)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_12">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_7">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unpackstringdata">UnpackString(data)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_13">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_8">Returns</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Delegates/">Delegates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Classes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/InteractionList/">InteractionList</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataReader/">DataReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataWriter/">DataWriter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TS2 Extender Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TS2 Extender Lua API</li>
+      <li class="breadcrumb-item active">Globals</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="globals">Globals</h1>
+<p>These are the new globals that are introduced with TS2 Extender.</p>
+<h2 id="fields">Fields</h2>
+<hr />
+<h3 id="ts2extender"><code>TS2Extender</code></h3>
+<p>(boolean) Set to True. This is simply to allow you to check if Extender is installed.</p>
+<h4 id="usage">Usage:</h4>
+<pre><code class="language-lua">if TS2Extender ~= nil then
+    -- Extender is installed. Do stuff!
+end
+</code></pre>
+<h2 id="methods">Methods</h2>
+<hr />
+<h3 id="getexecutabledirectory"><code>GetExecutableDirectory()</code></h3>
+<p>Returns the directory path that the game executable is located in.</p>
+<h4 id="returns">Returns</h4>
+<p><code>path</code>
+: (string) Path to directory.</p>
+<hr />
+<h3 id="getuserdirectory"><code>GetUserDirectory()</code></h3>
+<p>Returns the directory path that the user data is located in. e.g. <code>"Documents/EA Games/The Sims 2 Legacy"</code>.</p>
+<h4 id="returns_1">Returns</h4>
+<p><code>path</code>
+: (string) Path to directory.</p>
+<hr />
+<h3 id="registercheatname-description-callback"><code>RegisterCheat(name, description, callback)</code></h3>
+<p>Registers a new cheat for the in-game Ctrl+Shift+C console.</p>
+<h4 id="parameters">Parameters</h4>
+<p><code>name</code>
+: (string) The name of the cheat.</p>
+<p><code>description</code>
+: (string) Cheat description as shown by the <code>help</code> cheat.</p>
+<p><code>callback</code>
+: (function) The Lua function that will run when the cheat is called. Arguments are automatically passed from player input.</p>
+<h4 id="usage_1">Usage:</h4>
+<pre><code class="language-lua">RegisterCheat(&quot;Test&quot;, &quot;Test cheat! Writes a custom string into a TNS. Usage: Test (string)&quot;, function(str)
+    nUI.ShowTextNotification(1,str)
+end)
+</code></pre>
+<hr />
+<h3 id="getts2extenderversion"><code>GetTS2ExtenderVersion()</code></h3>
+<p>Simply returns the current version of TS2 Extender, as a string.</p>
+<h4 id="returns_2">Returns</h4>
+<p><code>version</code>
+: (string) Version string.</p>
+<hr />
+<h3 id="getuserinput"><code>GetUserInput()</code></h3>
+<p>Returns what the player typed into the last <code>text entry</code> dialog (called via BHAV Dialog prim), which on an unmodded game goes unused.</p>
+<h4 id="returns_3">Returns</h4>
+<p><code>input</code>
+: (string) Player text input.</p>
+<hr />
+<h3 id="overridestringoriginalindex-originalid-originalgroup-newindex-newid-newgroup"><code>OverrideString(originalIndex, originalId, originalGroup, newIndex, newId, newGroup)</code></h3>
+<p>Overrides a string with another.</p>
+<h4 id="parameters_1">Parameters</h4>
+<p><code>originalIndex</code>
+: (number) Index of the string in the STR#. Beginning from 1.</p>
+<p><code>originalId</code>
+: (number) Instance ID of the STR# to override.</p>
+<p><code>originalGroup</code>
+: (number) Group ID of the STR# to override.</p>
+<p><code>newIndex</code>
+: (number) Index of the new string in the STR#. Beginning from 1.</p>
+<p><code>newId</code>
+: (number) Instance ID of the new STR#.</p>
+<p><code>newGroup</code>
+: (number) Group ID of the new STR#.</p>
+<hr />
+<h3 id="clearstringoverrideoriginalindex-originalid-originalgroup"><code>ClearStringOverride(originalIndex, originalId, originalGroup)</code></h3>
+<p>Clears a previously overriden string.</p>
+<h4 id="parameters_2">Parameters</h4>
+<p><code>originalIndex</code>
+: (number) Index of the replaced string in the STR#. Beginning from 1.</p>
+<p><code>originalId</code>
+: (number) Instance ID of the replaced STR#.</p>
+<p><code>originalGroup</code>
+: (number) Group ID of the replaced STR#.</p>
+<hr />
+<h3 id="overrideuioriginalid-newid"><code>OverrideUI(originalId, newId)</code></h3>
+<p>Overrides a UIScript resource with another.</p>
+<h4 id="parameters_3">Parameters</h4>
+<p><code>originalId</code>
+: (number) Instance ID of the UIScript to replace.</p>
+<p><code>newId</code>
+: (number) Instance ID of the new UIScript to use.</p>
+<hr />
+<h3 id="clearuioverrideoriginalid"><code>ClearUIOverride(originalId)</code></h3>
+<p>Restores a previously replaced UIScript.</p>
+<h4 id="parameters_4">Parameters</h4>
+<p><code>originalId</code>
+: (number) Instance ID of the UIScript to restore.</p>
+<hr />
+<h3 id="overridemakemoneystringcallback"><code>OverrideMakeMoneyString(callback)</code></h3>
+<p>Replaces the function the game uses to generate money strings (e.g. 900000 -&gt; $900,000)</p>
+<h4 id="parameters_5">Parameters</h4>
+<p><code>callback</code>
+: (function) Lua function to use to generate money strings.</p>
+<h4 id="usage_2">Usage:</h4>
+<pre><code class="language-lua">OverrideMakeMoneyString(function(money)
+    return money .. &quot; pennies&quot;
+end)
+</code></pre>
+<hr />
+<h3 id="clearmakemoneystringoverride"><code>ClearMakeMoneyStringOverride()</code></h3>
+<p>Reverses the <code>OverrideMakeMoneyString</code> function, making the game generate money strings as normal.</p>
+<hr />
+<h3 id="addgamecallbackdelegate-callback-priority"><code>AddGameCallback(delegate, callback, priority)</code></h3>
+<p>Adds a callback that will run a custom Lua function when an event fires.</p>
+<h4 id="parameters_6">Parameters</h4>
+<p><code>delegate</code>
+: (<a href="../Delegates/">Delegates</a>) Delegate or event to listen to.</p>
+<p><code>callback</code>
+: (function) Lua function to run when the delegate is fired.</p>
+<p><code>priority</code>
+: (number) Number specifying the order the callback should run at. Higher values mean the callback will run after lower priority ones.</p>
+<h4 id="returns_4">Returns</h4>
+<p><code>id</code>
+: (string) Unique ID of the callback, for future removal.</p>
+<h4 id="usage_3">Usage:</h4>
+<pre><code class="language-lua">
+-- create a callback that will disable all interactions.
+
+local clearInteractionsCallback = AddGameCallback(Delegates.OnBuildPieMenu, function(interactions, sim, object, clicked, debug)
+    interactions:Clear()
+end)
+
+-- ..later remove it.
+
+RemoveGameCallback(Delegates.OnBuildPieMenu, clearInteractionsCallback)
+</code></pre>
+<hr />
+<h3 id="removegamecallbackdelegate-callbackid"><code>RemoveGameCallback(delegate, callbackId)</code></h3>
+<p>Removes a callback previously added with <code>AddGameCallback</code></p>
+<h4 id="parameters_7">Parameters</h4>
+<p><code>delegate</code>
+: (number) Delegate or event to listen to.</p>
+<p><code>callbackId</code>
+: (string) Unique ID of the callback to remove.</p>
+<hr />
+<h3 id="ensuredirectorypath"><code>EnsureDirectory(path)</code></h3>
+<p>Creates all directories in a path if they don't exist.</p>
+<h4 id="parameters_8">Parameters</h4>
+<p><code>path</code>
+: (string)</p>
+<hr />
+<h3 id="getfilesindirectorypath-extension"><code>GetFilesInDirectory(path, extension)</code></h3>
+<p>Recursively returns all files in a path.</p>
+<h4 id="parameters_9">Parameters</h4>
+<p><code>path</code>
+: (string) Path to the directory.</p>
+<p><code>extension</code>
+: (string) Extension filter (e.g. ".lua"). Pass "" to allow any extension.</p>
+<h4 id="returns_5">Returns</h4>
+<p><code>files</code>
+: (table) Table array with paths to all found files.</p>
+<hr />
+<h3 id="readfilepath"><code>ReadFile(path)</code></h3>
+<p>Reads a file</p>
+<h4 id="parameters_10">Parameters</h4>
+<p><code>path</code>
+: (string) Path to the file to read.</p>
+<h4 id="returns_6">Returns</h4>
+<p><code>fileContents</code>
+: (string) The contents of the file in a string.</p>
+<hr />
+<h3 id="writefilepath-contents"><code>WriteFile(path, contents)</code></h3>
+<p>Writes contents into a file.</p>
+<h4 id="parameters_11">Parameters</h4>
+<p><code>path</code>
+: (string) Path to the file to write.</p>
+<p><code>contents</code>
+: (string) Contents to write into the file.</p>
+<hr />
+<h3 id="packstringstr"><code>PackString(str)</code></h3>
+<p>Packs a string into an array of shorts, for storage in TS2.</p>
+<h4 id="parameters_12">Parameters</h4>
+<p><code>str</code>
+: (string) String to pack.</p>
+<h4 id="returns_7">Returns</h4>
+<p><code>str</code>
+: (table) Table array with the string encoded as short numbers.</p>
+<hr />
+<h3 id="unpackstringdata"><code>UnpackString(data)</code></h3>
+<p>Unpacks an array of short numbers into a string.</p>
+<h4 id="parameters_13">Parameters</h4>
+<p><code>data</code>
+: (table) Array of short numbers to unpack.</p>
+<h4 id="returns_8">Returns</h4>
+<p><code>str</code>
+: (string) Result string from unpacked array.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Index"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Delegates/" class="btn btn-neutral float-right" title="Delegates">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Delegates/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
