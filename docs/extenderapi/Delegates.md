@@ -7,7 +7,7 @@ You can use delegates via the [AddGameCallback](Globals.md#addgamecallbackdelega
 ---
 
 ### `Delegates.OnBuildPieMenu(interactions, sim, object, clicked, debug)`
-Returns the directory path that the game executable is located in.
+Fired when the game builds a user-directed interaction menu. Happens when hovering and clicking over objects.
 
 #### Parameters
 
