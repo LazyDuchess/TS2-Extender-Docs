@@ -1,0 +1,11 @@
+site_name: TS2 Extender Docs
+
+nav:
+  - Home: index.md
+  - TS2 Extender Lua API: 
+    - Index: extenderapi/index.md
+    - Globals: extenderapi/Globals.md
+    - Classes: 
+      - InteractionList: extenderapi/Classes/InteractionList.md
+      
+theme: readthedocs
