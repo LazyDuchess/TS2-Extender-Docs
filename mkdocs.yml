@@ -5,6 +5,7 @@ nav:
   - TS2 Extender Lua API: 
     - Index: extenderapi/index.md
     - Globals: extenderapi/Globals.md
+    - Delegates: extenderapi/Delegates.md
     - Classes: 
       - InteractionList: extenderapi/Classes/InteractionList.md
       
