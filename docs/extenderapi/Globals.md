@@ -73,6 +73,26 @@ Simply returns the current version of TS2 Extender, as a string.
 
 ---
 
+### `SetCASLot(lot)`
+Sets the lot for Create-A-Sim. Default is `CAS!`. Lot name MUST be only 7 characters long or less.
+
+#### Parameters
+
+`lot`
+: (string) New CAS lot.
+
+---
+
+### `SetYACASLot(lot)`
+Sets the lot for University Create-A-Sim. Default is `YACAS!`. Lot name MUST be only 7 characters long or less.
+
+#### Parameters
+
+`lot`
+: (string) New YACAS lot.
+
+---
+
 ### `GetUserInput()`
 Returns what the player typed into the last `text entry` dialog (called via BHAV Dialog prim), which on an unmodded game goes unused.
 
