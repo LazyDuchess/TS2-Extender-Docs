@@ -25,3 +25,11 @@ Fired when the game builds a user-directed interaction menu. Happens when hoveri
 
 `debug`
 : (boolean) Whether the player is shift clicking with testingcheatsenabled.
+
+### `Delegates.OnModifyVoiceEvent(args)`
+Fired when the game is about to play a voice sample. Allows you to change the sample filename.
+
+#### Parameters
+
+`args`
+: ([ModifyVoiceEventArgs](Classes/ModifyVoiceEventArgs.md)) Arguments for the event.
