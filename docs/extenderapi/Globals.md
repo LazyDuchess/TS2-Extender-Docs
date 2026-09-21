@@ -195,7 +195,7 @@ Adds a callback that will run a custom Lua function when an event fires.
 
 local clearInteractionsCallback = AddGameCallback(Delegates.OnBuildPieMenu, function(interactions, sim, object, clicked, debug)
 	interactions:Clear()
-end)
+end, 0)
 
 -- ..later remove it.
 
