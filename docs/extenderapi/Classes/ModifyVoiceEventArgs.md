@@ -17,7 +17,9 @@ The `ModifyVoiceEventArgs` class represents the arguments for the `OnModifyVoice
 Examples:
 
 `ama`: (a)dult (m)ale voice (a)
+
 `tfa`: (t)een (f)emale voice (a)
+
 `ca`: (c)hild voice (a)
 
 ---
