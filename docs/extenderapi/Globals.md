@@ -73,6 +73,26 @@ Simply returns the current version of TS2 Extender, as a string.
 
 ---
 
+### `GetCASLot()`
+Returns the current CAS lot. Default is `CAS!`.
+
+#### Returns
+
+`lot`
+: (string) CAS lot name.
+
+---
+
+### `GetYACASLot()`
+Returns the current University CAS lot. Default is `YACAS!`.
+
+#### Returns
+
+`lot`
+: (string) University CAS lot name.
+
+---
+
 ### `SetCASLot(lot)`
 Sets the lot for Create-A-Sim. Default is `CAS!`. Lot name MUST be only 7 characters long or less.
 
