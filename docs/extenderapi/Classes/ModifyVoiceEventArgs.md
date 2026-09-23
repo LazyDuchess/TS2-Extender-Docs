@@ -1,6 +1,6 @@
 # ModifyVoiceEventArgs
 
-The `ModifyVoiceEventArgs` class represents the arguments for the `OnModifyVoiceEvent` Delegate.
+The `ModifyVoiceEventArgs` class represents the arguments for the [`OnModifyVoiceEvent`](Delegates.md#delegatesonmodifyvoiceeventargs) Delegate.
 
 ## Fields
 
