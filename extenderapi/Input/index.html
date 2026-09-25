@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Input - TS2 Extender Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Input";
+        var mkdocs_page_input_path = "extenderapi/Input.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> TS2 Extender Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TS2 Extender Lua API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Globals/">Globals</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Delegates/">Delegates</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Input</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#kbm_getkeydownkeycode">KBM_GetKeyDown(keyCode)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kbm_getkeykeycode">KBM_GetKey(keyCode)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_1">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kbm_getkeyupkeycode">KBM_GetKeyUp(keyCode)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_2">Returns</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Classes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/InteractionList/">InteractionList</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataReader/">DataReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/DataWriter/">DataWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Classes/ModifyVoiceEventArgs/">ModifyVoiceEventArgs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TS2 Extender Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TS2 Extender Lua API</li>
+      <li class="breadcrumb-item active">Input</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="input">Input</h1>
+<p>These are global functions used to poll keyboard and mouse input.</p>
+<p>Inputs are currently polled per frame, so you should call these inside of a <a href="../Delegates/#delegatesonframeupdate">Delegates.OnFrameUpdate</a> callback.</p>
+<p>You can find the Windows key codes at <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Microsoft Learn</a>. You will have to type them in decimal however, as the version of Lua TS2 uses doesn't support hex codes.</p>
+<h2 id="methods">Methods</h2>
+<hr />
+<h3 id="kbm_getkeydownkeycode"><code>KBM_GetKeyDown(keyCode)</code></h3>
+<p>Returns whether a key was just pressed this frame.</p>
+<h4 id="parameters">Parameters</h4>
+<p><code>keyCode</code>
+: (number) Windows virtual key code for the key to check.</p>
+<h4 id="returns">Returns</h4>
+<p><code>result</code>
+: (boolean) Whether the key was just pressed this frame.</p>
+<hr />
+<h3 id="kbm_getkeykeycode"><code>KBM_GetKey(keyCode)</code></h3>
+<p>Returns whether a key is being held this frame.</p>
+<h4 id="parameters_1">Parameters</h4>
+<p><code>keyCode</code>
+: (number) Windows virtual key code for the key to check.</p>
+<h4 id="returns_1">Returns</h4>
+<p><code>result</code>
+: (boolean) Whether the key is being held this frame.</p>
+<hr />
+<h3 id="kbm_getkeyupkeycode"><code>KBM_GetKeyUp(keyCode)</code></h3>
+<p>Returns whether a key was just released this frame.</p>
+<h4 id="parameters_2">Parameters</h4>
+<p><code>keyCode</code>
+: (number) Windows virtual key code for the key to check.</p>
+<h4 id="returns_2">Returns</h4>
+<p><code>result</code>
+: (boolean) Whether the key was just released this frame.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Delegates/" class="btn btn-neutral float-left" title="Delegates"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Classes/InteractionList/" class="btn btn-neutral float-right" title="InteractionList">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Delegates/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Classes/InteractionList/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
