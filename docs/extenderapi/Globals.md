@@ -20,6 +20,16 @@ end
 
 ---
 
+### `IsLegacy()`
+Checks if the user is running the 2025 "Legacy Collection" release of the game.
+
+#### Returns
+
+`result`
+: (boolean) If true, we're on the Legacy Collection. Otherwise it's probably the original disc/Ultimate Collection version.
+
+---
+
 ### `GetExecutableDirectory()`
 Returns the directory path that the game executable is located in.
 
