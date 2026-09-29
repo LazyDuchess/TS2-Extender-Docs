@@ -50,6 +50,16 @@ Returns the directory path that the user data is located in. e.g. `"Documents/EA
 
 ---
 
+### `ExecuteCommand(string command)`
+Executes a cheat, same as typing it into the in-game cheat console.
+
+#### Parameters
+
+`command`
+: (string) Cheat command to execute.
+
+---
+
 ### `RegisterCheat(name, description, callback)`
 Registers a new cheat for the in-game Ctrl+Shift+C console.
 

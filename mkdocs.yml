@@ -7,6 +7,7 @@ nav:
     - Globals: extenderapi/Globals.md
     - Delegates: extenderapi/Delegates.md
     - Input: extenderapi/Input.md
+    - Materials: extenderapi/Materials.md
     - Classes: 
       - InteractionList: extenderapi/Classes/InteractionList.md
       - DataReader: extenderapi/Classes/DataReader.md

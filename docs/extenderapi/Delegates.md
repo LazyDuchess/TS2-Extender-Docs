@@ -40,3 +40,13 @@ Fired when the game is about to play a voice sample. Allows you to change the sa
 
 ### `Delegates.OnFrameUpdate()`
 Fired every frame. Takes no arguments.
+
+---
+
+### `Delegates.OnNeighborhoodLoaded()`
+Fired after entering a neighborhood. Takes no arguments.
+
+---
+
+### `Delegates.OnLotLoaded()`
+Fired after entering a lot. Takes no arguments.
