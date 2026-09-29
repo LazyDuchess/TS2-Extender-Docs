@@ -12,5 +12,8 @@ nav:
       - DataReader: extenderapi/Classes/DataReader.md
       - DataWriter: extenderapi/Classes/DataWriter.md
       - ModifyVoiceEventArgs: extenderapi/Classes/ModifyVoiceEventArgs.md
+  - The Sims 2 Lua API:
+    - Index: sims2api/index.md
+    - Globals: sims2api/Globals.md
       
 theme: readthedocs
