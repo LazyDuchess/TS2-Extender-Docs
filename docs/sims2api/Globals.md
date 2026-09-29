@@ -31,6 +31,6 @@ Runs a BHAV tree by name, on the provided Object ID and with the provided parame
 `result`
 : (boolean) The return value of the tree.
 
-### Remarks
+#### Remarks
 
 On top of the obvious benefits of running SimAntics inside the Lua context, this can be used to implement "Check Trees" when performing interaction injection with Extender.
