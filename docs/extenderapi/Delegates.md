@@ -38,8 +38,13 @@ Fired when the game is about to play a voice sample. Allows you to change the sa
 
 ---
 
-### `Delegates.OnFrameUpdate()`
-Fired every frame. Takes no arguments.
+### `Delegates.OnFrameUpdate(delta)`
+Fired every frame.
+
+#### Parameters
+
+`delta`
+: (number) Seconds elapsed between this frame and the last.
 
 ---
 
